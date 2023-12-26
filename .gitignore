@@ -12,3 +12,4 @@ calbot.cfg
 bak/*
 
 venv
+__pycache__
