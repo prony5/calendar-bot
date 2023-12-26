@@ -212,7 +212,7 @@ def filter_notified_events(events, config):
             last_notified = notified is not None and notified.last_notified
             if last_notified is not None and last_notified <= advance:
                 continue
-            if event.notify_datetime <= now + timedelta(hours=advance):
+            if event.notify_datetime <= now + timedelta(minutes=advance):
                 event.notified_for_advance = advance
                 yield event
                 break
