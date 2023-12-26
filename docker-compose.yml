@@ -7,3 +7,5 @@ services:
     container_name: calbot_container
     volumes:
       - "./:/app"
+    environment:
+      - TZ=Asia/Yekaterinburg

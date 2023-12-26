@@ -20,6 +20,7 @@ Use it to mirror calendar events to the channel and notify the subscribers.
 user@user:~/: cd calendar_bot # change directory
 user@user:calendar_bot: cp callbot.cfg.saple callbot.cfg #copy default config
 user@user:calendar_bot: nano callbot.cfg #paste your params
+user@user:calendar_bot: nano docker-compose.yml #change your TZ
 user@user:calendar_bot: docker compose up -d # run docker container
 ```
 
