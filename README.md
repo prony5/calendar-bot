@@ -14,6 +14,15 @@ Use it to mirror calendar events to the channel and notify the subscribers.
 4. Type `/add`, then, after prompts, enter `https://your_calendar.ics` and `@your_channel` (setting your actual data) in the chat with the bot.
 5. Wait for bot notifications in the chat and in the channel.
 
+## Start with docker container
+
+```console
+user@user:~/: cd calendar_bot # change directory
+user@user:calendar_bot: cp callbot.cfg.saple callbot.cfg #copy default config
+user@user:calendar_bot: nano callbot.cfg #paste your params
+user@user:calendar_bot: docker compose up -d # run docker container
+```
+
 ## Bot Commands
 
 ### /add

@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  calbot:
+    build: .
+    image: calbot:v0
+    container_name: calbot_container
+    volumes:
+      - "./:/app"
