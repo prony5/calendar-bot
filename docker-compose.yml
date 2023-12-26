@@ -7,5 +7,9 @@ services:
     container_name: calbot_container
     volumes:
       - "./:/app"
-    environment:
-      - TZ=Asia/Yekaterinburg
+    env_file:
+      - .env
+    command:
+      - sh
+      - -c
+      - "ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && python /app/calbot.py /app/calbot.cfg"
