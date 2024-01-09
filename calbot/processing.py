@@ -115,4 +115,5 @@ def send_event(bot, config, event):
     :return: None
     """
     logger.info('Sending event %s "%s" to %s', event.id, event.title, config.channel_id)
-    bot.sendMessage(chat_id=config.channel_id, text=format_event(config, event))
+    text = format_event(config, event)
+    bot.sendMessage(chat_id=config.channel_id, text=text)

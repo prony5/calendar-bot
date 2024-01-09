@@ -10,3 +10,6 @@ calbot.cfg
 
 .python-version
 bak/*
+
+venv
+__pycache__

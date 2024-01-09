@@ -62,10 +62,10 @@ def get_advance(bot, update, config):
     user_id = str(message.chat_id)
     try:
         user_config = config.load_user(user_id)
-        text = 'Events are notified %s hours in advance.\n\n' \
-               'Type how many hours in advance events should be notified. ' \
+        text = 'Events are notified %s minutes in advance.\n\n' \
+               'Type how many minutes in advance events should be notified. ' \
                'Several intervals can be entered separated by space.\n\n' \
-               'Example:\n48 24 12 6\n\n' \
+               'Example:\n60 30 15 5\n\n' \
                'Type /cancel to cancel update.' % (
                    ', '.join(map(str, user_config.advance)),
                )
@@ -81,9 +81,9 @@ def set_advance(bot, update, config):
     user_id = str(message.chat_id)
     try:
         user_config = config.load_user(user_id)
-        hours = message.text.split()
-        user_config.set_advance(hours)
-        text = 'Advance hours are updated.\nEvents will be notified %s hours in advance.' % (
+        minutes = message.text.split()
+        user_config.set_advance(minutes)
+        text = 'Advance minutes are updated.\nEvents will be notified %s minutes in advance.' % (
             ', '.join(map(str, user_config.advance)),
         )
         message.reply_text(text)
