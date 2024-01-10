@@ -18,8 +18,8 @@ Use it to mirror calendar events to the channel and notify the subscribers.
 
 ```console
 user@user:~/: cd calendar_bot # change directory
-user@user:calendar_bot: cp callbot.cfg.sample callbot.cfg #copy default cfg
-user@user:calendar_bot: nano callbot.cfg #paste your params
+user@user:calendar_bot: cp calbot.cfg.sample calbot.cfg #copy default cfg
+user@user:calendar_bot: nano calbot.cfg #paste your params, take a look for webhook parameter and if you just host without a domain, then you need to convert "yes" to "no"
 user@user:calendar_bot: cp .env.dist .env
 user@user:calendar_bot: nano .env #change default TZ
 user@user:calendar_bot: docker compose up -d # run docker container
